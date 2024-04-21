@@ -1,0 +1,53 @@
+/* Productos.module.css */
+
+.productosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.instrumentoCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.imagenContainer {
+    text-align: center;
+}
+
+.imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.envio {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.ventas {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.botonContainer {
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Instrumento } from "../../Components/Instrumento/Instrumento";
+import styles from './Productos.module.css';
 
 export const Productos = () => {
   const [data, setData] = useState<any[]>([]);
@@ -8,7 +9,7 @@ export const Productos = () => {
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:8080/instrumento');
-        const data = await response.json();          
+        const data = await response.json();
         setData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -19,10 +20,12 @@ export const Productos = () => {
   }, [data]);
 
   return (
-    <>
-      {data.map(item => (
-        <Instrumento key={item.id} item={item} />
-      ))}
-    </>
+      <div className={styles.productosContainer}>
+        {data.map(item => (
+            <div key={item.id} className={styles.instrumentoCard}>
+              <Instrumento item={item} />
+            </div>
+        ))}
+      </div>
   );
 };
